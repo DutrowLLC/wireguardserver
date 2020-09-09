@@ -18,7 +18,9 @@ if [[ "$(lsb_release -is)" == "Raspbian" ]]; then
 	apt-get install -y raspberrypi-kernel-headers libmnl-dev libelf-dev build-essential ufw
 	cd /opt
 	# get the latest stable snapshot
-	curl -L https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20190601.tar.xz --output WireGuard.tar.xz
+	# curl -L https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20190601.tar.xz --output WireGuard.tar.xz
+	curl -L https://github.com/DutrowLLC/wireguardserver/blob/master/WireGuard-0.0.20190601.tar.xz?raw=true --output WireGuard.tar.xz
+	
 	# create directory
 	mkdir -p WireGuard
 	# unzip tarball
